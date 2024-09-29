@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BaseUser.Master.cs" Inherits="ProjectPSD.Views.partial.Base" %>
+<%@ Register Src="customer/navbar.ascx" TagPrefix="uc" TagName="Navbar" %>
+<%@ Register Src="customer/footer.ascx" TagPrefix="uc" TagName="Footer" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" /> 
+    <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="../../Scripts/bootstrap.bundle.min.js"></script>
+    <script src="../../Scripts/bootstrap.min.js"></script>
+    <title><%: Page.Title %></title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .bg-dark {
+            color: white;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+        <form runat="server">
+
+                <uc:Navbar ID="NavbarControl" runat="server" />
+
+                <div class="d-flex justify-content-center align-items-center vh-100">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+                 </div>
+
+                <uc:Footer ID="FooterControl" runat="server" />
+
+            </form>
+            
+
+</body>
+</html>
